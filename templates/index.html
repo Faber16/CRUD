@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="/static/scrip.js"></script>
+  <title>Gestion clientes</title>
+</head>
+<body>
+
+
+<h1>Gestión de clientes</h1>
+
+<a onclick="add()" href="#" class="myButtonEd">Agregar cliente</a>
+
+<table id = "customers">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Email</th>
+      <th>Teléfono</th>
+      <th>Acciones</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+
+</table>
+
+<!-- Modal -->
+<div id="modal" class="modale" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h2>Datos del cliente</h2>
+      <a onclick="cerrarModal()" href="#" class="btn-close closemodale" aria-hidden="true">&times;</a>
+    </div>
+    <div class="modal-body">
+      <input id="txtId" type="hidden"  placeholder="ID" size="20" /></br/>
+      <input id="txtNombre" type="text"  placeholder="Nombre" size="20" /></br/>
+      <input id="txtApellido" type="text"  placeholder="Apellido" size="20" /></br/>
+      <input id="txtEmail" type="text"  placeholder="Email" size="20" /></br/>
+      <input id="txtTelefono" type="text"  placeholder="Teléfono" size="20" /></br/>
+      <input id="txtAdress" type="text"  placeholder="Dirección" size="20" /></br/>
+    </div>
+    <div class="modal-footer">
+      <a onclick="save()" href="#" class="btn" id="btn_ingresar">Guardar</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
