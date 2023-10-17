@@ -7,7 +7,7 @@ cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'Teoriadecuerdas16'
+app.config['MYSQL_PASSWORD'] = 'password'
 app.config['MYSQL_DB'] = 'api'
 mysql = MySQL(app)
 
@@ -29,10 +29,9 @@ def getAllCustomers():
             'adress': row[5]
         }
         result.append(content)
-    return jsonify(result)  # Convierte el result en json
+    return jsonify(result) 
 
 
-# Por defecto cuando llamamos una url se esta utilizando el tipo de dato GET
 @app.route('/api/customers/<int:id>')
 @cross_origin()
 def getCustomer(id):
